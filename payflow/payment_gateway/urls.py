@@ -21,4 +21,4 @@ urlpatterns = [
     path('v1/', include('payment_gateway.urls_v1')),
     # Include the REST API endpoints for model resources
     path('v1/resources/', include(router.urls)),
-]
+] + router.urls
