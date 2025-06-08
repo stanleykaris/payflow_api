@@ -21,11 +21,11 @@ jobs:
           - name: Install dependencies
             run: |
               python -m pip install --upgrade pip
-              pip install -r requirements.txt
+              pip install -r payflow/requirements.txt
 
           - name: Run tests
             run: |
-              python manage.py test tests/ --verbosity=2
+              cd payflow && python manage.py test tests/ --verbosity=2
           - name: Run migrations
             run: |
-              python manage.py migrate --noinput
+              cd payflow && python manage.py migrate --noinput
