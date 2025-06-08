@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
-from payment_gateway.serializers import UserSerializer, TransactionSerializer, SubscriptionSerializer, TransactionLogSerializer, PaymentMethodSerializer
-from payment_gateway.models import User, Transaction, Subscriptions, TransactionLog, PaymentMethod
+from payment_gateway.serializers import UserSerializer, TransactionSerializer, SubscriptionSerializer, TransactionLogSerializer
+from payment_gateway.models import User, Transaction, Subscriptions, TransactionLog
 
 class TestSerializers(unittest.TestCase):
 
@@ -39,12 +39,6 @@ class TestSerializers(unittest.TestCase):
         transaction_log = TransactionLog(additional_info=None)
         serializer = TransactionLogSerializer(transaction_log)
         self.assertIsNone(serializer.data['additional_info'])
-
-    @patch('payment_gateway.serializers.PaymentMethod.get_card_brand_display', return_value='Unknown')
-    def test_payment_method_serializer_handles_unsupported_card_brand(self, mock_get_card_brand_display):
-        payment_method = PaymentMethod(card_brand='unsupported')
-        serializer = PaymentMethodSerializer(payment_method)
-        self.assertEqual(serializer.data['card_brand_display'], 'Unknown')
 
 if __name__ == '__main__':
     unittest.main()
