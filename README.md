@@ -84,11 +84,6 @@ payflow_api/
 - Use Stripe test keys and test card numbers (e.g., `4242 4242 4242 4242`) for development.
 - Webhook endpoints can be tested locally using the [Stripe CLI](https://stripe.com/docs/stripe-cli).
 
-## Extending for PayPal
-
-- Add PayPal integration in `views.py` and `serializers.py` following the Stripe pattern.
-- Store PayPal credentials in the `PaymentGateway` model.
-
 ## License
 
 This project is for educational and demonstration purposes. Adapt and secure for production use as needed.
