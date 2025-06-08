@@ -18,7 +18,6 @@ class TestSerializers(unittest.TestCase):
         self.assertIn('created_at', serializer.data)
         self.assertIn('updated_at', serializer.data)
 
-    @patch('payment_gateway.models.Transaction.get_status_display', return_value='Completed')
     def test_transaction_serializer_includes_status_display(self, mock_get_status_display):
         transaction = Transaction(status='completed')
         serializer = TransactionSerializer(transaction)
