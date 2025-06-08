@@ -18,7 +18,7 @@ class TestSerializers(unittest.TestCase):
         self.assertIn('created_at', serializer.data)
         self.assertIn('updated_at', serializer.data)
 
-    def test_transaction_serializer_includes_status_display(self, mock_get_status_display):
+    def test_transaction_serializer_includes_status_display(self):
         transaction = Transaction(status='completed')
         serializer = TransactionSerializer(transaction)
         self.assertEqual(serializer.data['status_display'], 'Completed')
