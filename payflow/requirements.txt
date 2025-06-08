@@ -8,6 +8,7 @@ charset-normalizer==3.4.2
 Django==5.2.1
 djangorestframework==3.16.0
 drf-yasg==1.21.10
+gunicorn==23.0.0
 idna==3.10
 inflection==0.5.1
 jsonpickle==3.3.0
