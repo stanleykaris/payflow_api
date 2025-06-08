@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import patch
 from payment_gateway.serializers import UserSerializer, TransactionSerializer, SubscriptionSerializer, TransactionLogSerializer
 from payment_gateway.models import User, Transaction, Subscriptions, TransactionLog
 
