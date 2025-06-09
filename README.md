@@ -34,10 +34,10 @@ payflow_api/
 
 ## Key Endpoints
 
-- `POST /api/v1/payment-intent/` — Create a Stripe payment intent
-- `POST /api/v1/payment-link/` — Generate a Stripe payment link
+- `POST /api/v1/create-payment-intent/` — Create a Stripe payment intent
+- `POST /api/v1/create-payment-link/` — Generate a Stripe payment link
 - `POST /api/v1/checkout-session/` — Create a Stripe checkout session
-- `POST /api/v1/webhook/stripe/` — Stripe webhook handler
+- `POST /api/v1/webhook/` — Stripe webhook handler
 - (Extendable for PayPal and other gateways)
 
 ## Models
